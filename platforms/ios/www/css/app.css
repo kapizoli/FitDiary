@@ -1,0 +1,993 @@
+@font-face
+{
+font-family: Titillium_bold;
+src: url(../fonts/TITILLIUMWEB-BOLD_0.TTF);
+}
+@font-face
+{
+font-family: Titillium_regular;
+src: url(../fonts/TITILLIUMWEB-REGULAR_0.TTF);
+}
+
+.clear {
+    clear: both;
+}
+
+
+.styled-select select {
+    background: transparent;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 40px;
+    font-weight: normal;
+    -webkit-appearance: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.styled-select {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0 15px 0;
+    
+    overflow: hidden;
+    
+    background: url("../img/select.png") no-repeat right #f4f4f4;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    
+}
+
+body .button{
+    background: #cccccc;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: normal;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#scrollable-dropdown-menu .tt-dropdown-menu {
+max-height: 150px;
+overflow-y: auto;
+}
+
+html body .view-content-wrapper h1.page-header {
+	padding: 4% 0;
+	background: #c4e7ef; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c4e7ef 0%, #e1f3f7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c4e7ef), color-stop(100%,#e1f3f7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #c4e7ef 0%,#e1f3f7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #c4e7ef 0%,#e1f3f7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c4e7ef 0%,#e1f3f7 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #c4e7ef 0%,#e1f3f7 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4e7ef', endColorstr='#e1f3f7',GradientType=0 ); /* IE6-9 */
+	border-bottom: 1px solid #bfe5ee;
+	font-size: 15px;
+	color: #246a7c;
+	font-family: Titillium_bold;
+}
+
+.pharmacy-week {
+	padding-top: 0;
+	height: 40px;
+}
+.pharmacy-week ul {
+	list-style-type: none;
+	margin: 0 auto;
+	width: 290px;
+}
+.pharmacy-week ul li {
+	float: left;
+	margin: 0 15px 0 0;
+	text-align: center; 
+	position: relative;
+}
+.pharmacy-week ul li:last-child {
+	margin: 0;
+}
+.menu-view .get-pharmacy-button, .save-day-events, .save-settings, .save-inspection-reminder {
+	padding: 7px 0;
+	width: 28px;
+	font-size: 13px; 
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #be3a00;
+	color: #FFFFFF;
+}
+.menu-view .get-pharmacy-button:after {
+	content: " ";
+	position: absolute;
+	left: 10px;
+	bottom: -3px;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #be3a00;
+}
+html body .menu-view .pb-green:after {
+	content: " ";
+	position: absolute;
+	left: 10px;
+	bottom: -3px;
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #22a86c; 
+	
+}
+html body .menu-view .pb-green {
+	background-color: #22a86c;
+}
+
+.jqplot-xaxis-tick {
+	font-size: 9px;
+	text-transform: normal;
+}
+
+/* App css */
+/* Főképernyő */
+.top-line {
+	height: 10px;
+	border-bottom: 1px solid #FFFFFF;
+	background-color: #5abcd6;
+}
+html body .view-content {
+    background: #bfe5ee; /* Old browsers */
+	background: -moz-linear-gradient(top,  #bfe5ee 0%, #e1f3f7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bfe5ee), color-stop(100%,#e1f3f7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #bfe5ee 0%,#e1f3f7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #bfe5ee 0%,#e1f3f7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #bfe5ee 0%,#e1f3f7 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #bfe5ee 0%,#e1f3f7 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfe5ee', endColorstr='#e1f3f7',GradientType=0 ); /* IE6-9 */
+}
+html body div {
+	font-family: Titillium_bold;
+	text-transform: none;
+}
+body .container {
+	font-family: Titillium_bold;
+        padding: 2% 6%;
+}
+.container .main-menu .button {
+    margin: 0;
+    padding: 0;
+}
+.container .button .button-label, body .container form .button .button-label {
+    padding: 0;
+    text-align: center;
+    font-size: 14px; 
+    text-transform: none;
+}
+.container .main-menu .button .button-label img {
+	width: 50px;
+	margin-bottom: 10px;
+}
+body .container .main-menu .calendar {
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: 1px solid #246a7c;
+    border-right: 1px solid #246a7c;
+}
+body .container .main-menu .reminder {
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #246a7c;
+}
+body .container .main-menu .graphs {
+    -webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+    border-right: 1px solid #246a7c;
+}
+body .container .main-menu .cholester-table {
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+}
+.container .main-menu .pain-add-button {
+    width: 50%;
+    font-family: Titillium_bold;
+    float: left;
+    border-radius: 0;
+    background-color: #2aa8c8;
+    height: 110px;
+}
+body .get-pharmacy,
+body .save-day-events, body .save-settings, body .save-inspection-reminder {
+	width: 70%;
+	margin: 0 auto;
+	background-color: #be3a00;
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.pilld-line {
+	margin: 0;
+	padding: 0;
+	height: 1px;
+	width: 100%;
+	background-color: #bfe5ee;
+}
+.menu-view .pill-days {
+	background-color: #bfe5ee;
+	border-top: 1px solid #FFFFFF;
+	padding-top: 24px;
+	position: relative;
+	padding-bottom: 15px;
+}
+.menu-view .pill-days .actual-month {
+	margin: 0 auto;
+	margin-top: -15px;
+	padding: 8px 5px;
+	background-color: #FFFFFF;
+	color: #525252;
+	position: absolute;
+	width: 110px;
+	left: 50%;
+	top: -4px;
+	margin-left: -50px;
+	font-size: 13px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+}
+.menu-view .pill-days ul li {
+	
+}
+
+.diary-view .bottom-side {
+	
+}
+.diary-view .bottom-side .info {
+	float: left;
+	width: 55%
+}
+.diary-view .bottom-side .export {
+	float: right;
+	width: 43%;
+	position: relative;
+	margin-top: 18px;
+}
+.diary-view .bottom-side .export .button {
+	width: 100%;
+	background-color: #be3a00;
+	height: 60px;
+	padding-top: 14px;
+}
+.diary-view .bottom-side .export .button:after {
+	content: " ";
+	position: absolute;
+	left: 50%;
+	bottom: -6px;
+	margin-left: -8px;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #be3a00;
+}
+.diary-view .bottom-side .export .button .button-label {
+	
+}
+.diary-view .bottom-side .info .black-info {
+	color: #FFFFFF;
+	background: url('../img/gyogyszer_beveve.png') #2d2f31 no-repeat 5px center;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 9px 0;
+	width: 100%;
+	margin-bottom: 4px;
+	font-family: Titillium_regular;
+	font-size: 11px;
+}
+.diary-view .bottom-side .info .black-info span {
+	padding-left: 44px;
+}
+body .diary-view .bottom-side .info .cholester-lock {
+		background: url('../img/koleszterin_rogzitve.png') #2d2f31 no-repeat 5px center;
+}
+body .diary-view .bottom-side .info .weight-lock {
+		background: url('../img/suly_rogzitve.png') #2d2f31 no-repeat 5px center;
+}
+body .diary-view .bottom-side .info .change-pill {
+		background: url('../img/gyogyszercsere.png') #2d2f31 no-repeat 5px center;
+}
+
+/* Továbbiak */
+.more-view .container {
+	border-top: 2px solid #ffffff;
+}
+
+/* Lista */
+body .list {
+	padding: 0;
+	margin: 15px 0 0 0;
+}
+body .list-item {
+	background: #2aa8c8;
+	border: 1px solid #246a7c;
+	color: #fff;
+	font-size: 14px;
+	height: 36px;
+	font-family: Titillium_bold;
+	min-height: 32px;
+	padding: 0;
+	margin-bottom: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+body .list-item .list-item-image {
+	-webkit-background-clip: padding-box;
+	   -moz-background-clip: padding-box;
+	    -ms-background-clip: padding-box;
+	     -o-background-clip: padding-box;
+	        background-clip: padding-box;
+	border-radius: 4px;
+	height: 13px;
+	width: 9px;
+	margin: -6px 10px -6px -6px;
+}
+
+body .list-item .list-item-label {
+	overflow: hidden;                                            /* Important */
+	padding-top: 0;
+	padding-bottom: 0;
+	text-overflow: ellipsis;                                     /* Important */
+	line-height: 33px;
+	white-space: nowrap;                                         /* Important */
+	padding-left: 22px;
+}
+
+
+
+body .list-item.is-selected,
+body .list-item.is-highlighted {
+	background: #2aa8c8; /* Old browsers */
+background: -moz-linear-gradient(top,  #2aa8c8 0%, #e1f3f7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2aa8c8), color-stop(100%,#e1f3f7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #2aa8c8 0%,#e1f3f7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #2aa8c8 0%,#e1f3f7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #2aa8c8 0%,#e1f3f7 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #2aa8c8 0%,#e1f3f7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2aa8c8', endColorstr='#e1f3f7',GradientType=0 ); /* IE6-9 */
+
+	color: #fff;
+	text-shadow: none;
+}
+
+body .list-item.is-selected    .list-item-detail,
+body .list-item.is-highlighted .list-item-detail {
+	color: #fff;
+}
+
+/* Kolszterin táblázat */
+.cholester-table-view .container {
+	margin-top: 15px;
+}
+.cholester-table-view .cholesterol_name, 
+.pill-reminder-view .pillname, 
+.add-event-view .weight,
+.add-event-view .info,
+.add-event-view .haskorfogat,
+.receipt-quantity,
+.receipt-start,
+.receipt-before-day,
+.receipt-reminder-time {
+	border: none;
+	height: 32px;
+	font-size: 14px;
+	font-family: Titillium_regular;
+	text-align: center;
+	width: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-image: url('../img/nagyito.png');
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-position: 95% center;
+}
+html body .multiple-datasets {
+	width: 100%;
+}
+html body .multiple-datasets .twitter-typeahead, html body .multiple-datasets .twitter-typeahead input {
+	width: 100%;
+}
+.tt-dropdown-menu {
+	background-color: #ffffff;
+	font-family: Titillium_regular;
+	font-size: 14px;
+}
+.tt-dropdown-menu div.tt-suggestion {
+	padding: 8px 10px;
+	margin: 0;
+	border-bottom: 1px solid #666;
+	line-height: 14px;
+	font-weight: normal;
+}
+.tt-dropdown-menu div.tt-suggestion p {
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+}
+.cholester-table-view .show-cholesterol-button, .pill-reminder-view form .save-pill-reminder,
+.receipt-reminder-view form .save-receipt-reminder  {
+	width: 70%;
+	margin: 0 auto;
+	background-color: #be3a00;
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.cholester-table-view .result {
+	text-align: center;
+	font-size: 14px;
+	font-family: Titillium_regular;
+	color: #246a7c;
+	margin-top: 20px;
+}
+.cholester-table-view .result .chol-value {
+	background-color: #2d2f31;
+	width: 80px;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
+	color: #FFFFFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* emlékeztetők */
+
+.pill-reminder-view form, .receipt-reminder-view form {
+	font-size: 16px;
+	font-family: Titillium_regular;
+}
+
+/* Base for label styling */
+.pill-reminder-view [type="checkbox"]:not(:checked),
+.pill-reminder-view [type="checkbox"]:checked, 
+.receipt-reminder-view [type="checkbox"]:not(:checked),
+.receipt-reminder-view [type="checkbox"]:checked,
+.inspection-reminder-view [type="checkbox"]:not(:checked),
+.inspection-reminder-view [type="checkbox"]:checked,
+.export-view [type="checkbox"]:not(:checked),
+.export-view [type="checkbox"]:checked
+ {
+  position: absolute;
+  left: -9999px;
+}
+
+.pill-reminder-view [type="checkbox"]:not(:checked) + label,
+.pill-reminder-view [type="checkbox"]:checked + label,
+.receipt-reminder-view [type="checkbox"]:not(:checked) + label,
+.receipt-reminder-view [type="checkbox"]:checked + label,
+.inspection-reminder-view [type="checkbox"]:not(:checked) + label,
+.inspection-reminder-view [type="checkbox"]:checked + label,
+.export-view [type="checkbox"]:not(:checked) + label,
+.export-view [type="checkbox"]:checked + label {
+  position: relative;
+  cursor: pointer;
+  width: 98%;
+  display: block;
+  padding: 5px 0;
+}
+
+/* checkbox aspect */
+.pill-reminder-view [type="checkbox"]:not(:checked) + label:before,
+.pill-reminder-view [type="checkbox"]:checked + label:before,
+.receipt-reminder-view [type="checkbox"]:not(:checked) + label:before,
+.receipt-reminder-view [type="checkbox"]:checked + label:before,
+.inspection-reminder-view [type="checkbox"]:not(:checked) + label:before,
+.inspection-reminder-view [type="checkbox"]:checked + label:before,
+.export-view [type="checkbox"]:not(:checked) + label:before,
+.export-view [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  right:0; top: 2px;
+  width: 23px; height: 23px;
+  border: none;
+  background: url('../img/checkbox-unchecked.png');
+  
+}
+/* checked mark aspect */
+.pill-reminder-view [type="checkbox"]:not(:checked) + label:after,
+.pill-reminder-view [type="checkbox"]:checked + label:after,
+.receipt-reminder-view [type="checkbox"]:not(:checked) + label:after,
+.receipt-reminder-view [type="checkbox"]:checked + label:after,
+.inspection-reminder-view [type="checkbox"]:not(:checked) + label:after,
+.inspection-reminder-view [type="checkbox"]:checked + label:after,
+.export-view [type="checkbox"]:not(:checked) + label:after,
+.export-view [type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 2px; right: 0;
+  width: 23px; height: 23px;
+  background: url('../img/checkbox-checked.png');
+}
+/* checked mark aspect changes */
+.pill-reminder-view [type="checkbox"]:not(:checked) + label:after,
+.receipt-reminder-view [type="checkbox"]:not(:checked) + label:after,
+.inspection-reminder-view [type="checkbox"]:not(:checked) + label:after,
+.export-view [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.pill-reminder-view [type="checkbox"]:checked + label:after,
+.receipt-reminder-view [type="checkbox"]:checked + label:after,
+.inspection-reminder-view [type="checkbox"]:checked + label:after,
+.export-view [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* accessibility */
+.pill-reminder-view [type="checkbox"]:checked:focus + label:before,
+.pill-reminder-view [type="checkbox"]:not(:checked):focus + label:before,
+.receipt-reminder-view [type="checkbox"]:checked:focus + label:before,
+.inspection-reminder-view [type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted blue;
+}
+/* checkbox style end */
+
+
+.styled-select select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   border: 0;
+   border-radius: 0;
+   height: 27px;
+   -webkit-appearance: none;
+   font-family: Titillium_regular;
+   }
+   
+   .styled-select {
+   width: 240px;
+   height: 27px;
+   overflow: hidden;
+   background: url(../img/select-bg.png) no-repeat right #fff;
+   border: none;
+   }
+body .pill-number-select select {
+	width: 90px;
+}
+body .pill-number-select {
+	width: 62px;
+	float: left;
+}
+
+body .pill-type-select select {
+	width: 120px;
+}
+body .pill-type-select {
+	width: 92px;
+	float: left;
+	margin-left: 15px;
+}
+
+body .pill-repeat-select select {
+	width: 100px;
+}
+body .pill-repeat-select {
+	width: 72px;
+	float: left;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.pill-type-span-1 {
+	margin-left: 20px;
+}
+.pill-type-span {
+	float: left;
+	display: inline-block;
+	margin-top: 15px;
+}
+.pill-reminder-time-span {
+	font-size: 16px;
+	display:inline-block;
+}
+.pill-reminder-time {
+	border: none;
+	height: 32px;
+	font-size: 14px;
+	font-family: Titillium_regular;
+	text-align: center;
+	width: 80px;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	margin-left: 10px;
+}
+
+/* naptár bejegyzés */
+.add-event-view .ldl-select select, .add-event-view .hdl-select select {
+	width: 80px;
+}	
+.add-event-view .ldl-select, .add-event-view .hdl-select {
+	width: 62px;
+	float: left;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+body .add-event-view .triglicerid-span {
+	margin-left: 42px;
+	margin-top: 7px;
+}
+body .add-event-view .testsuly-span {
+	margin-left: 52px;
+	margin-top: 6px;
+}
+body .add-event-view .hdl-span {
+	margin-left: 80px;
+}
+body .add-event-view .ldl-select {
+	margin-bottom: 0;
+	
+}
+body .add-event-view .day-event-form div.left-offset {
+	margin-left: 123px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+body .add-event-view .day-event-form div.triglicerid-select {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+body .add-event-view .day-event-form div.testsuly-select {
+	width: 70px
+}
+body .add-event-view .day-event-form div.hdl-select {
+	margin-bottom: 10px;
+}
+body .add-event-view .ldl-param, body .add-event-view .triglicerid-param {
+	margin-top: 7px;
+}
+.add-event-view .cholspan, .add-event-view .param {
+	float: left;
+	font-family: Titillium_regular;
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 15px;
+}
+body .add-event-view .hdl-select {
+	margin-left: 123px;
+}
+.add-event-view .symptom-select select {
+	width: 110%;
+}	
+.add-event-view .symptom-select {
+	width: 100%;
+	margin-bottom: 10px;
+}
+body .add-event-view .weight, body .add-event-view .info,
+body .add-event-view .haskorfogat {
+	background-image: none;	
+	text-align: left;
+	padding-left: 4%;
+	width: 96%;
+	margin-bottom: 10px;
+}
+body .add-event-view input.weight {
+	width: 80%;
+}
+body .add-event-view .haskorfogat {
+	margin-top: 10px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #0f3c48;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #0f3c48;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #0f3c48;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #0f3c48;
+}
+.add-event-view .blood-press,
+.add-event-view .sep {
+	float: left;
+	font-family: Titillium_regular;
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.add-event-view .szisz, .add-event-view .diasz, .inspection-reminder-view form input {
+	border: none;
+	height: 32px;
+	font-size: 14px;
+	font-family: Titillium_regular;
+	text-align: center;
+	width: 20%;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	margin: 0 10px;
+}
+body .add-event-view .list {
+	padding: 0;
+	margin: 0 0 0 0;
+}
+body .add-event-view .list-item {
+	background: none;
+	border: none;
+	color: #246a7c;
+	font-size: 16px;
+	height: 36px;
+	font-family: Titillium_regular;
+	min-height: 30px;
+	padding: 3px 0;
+	margin-bottom: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+body .add-event-view .list-item:nth-child(even) {
+	background: #aad5df;
+}
+/*
+body .add-event-view  .save-day-events {
+	-top: 10px;
+}*/
+body .add-event-view .container {
+	padding-bottom: 0;
+}
+body .add-event-view .symptom-list-container {
+	padding-top: 10px;
+	
+}
+
+.settings-view span, .userdatas p {
+	font-size: 16px;
+	color: #246a7c;
+	font-family: Titillium_regular;
+}
+.userdatas {
+	display: none;
+}
+.userdatas p {
+	margin-top: 20px;
+	font-family: Titillium_bold;
+	font-size: 24px;
+	text-align: center;
+}
+.settings-view .save-settings span {
+	font-family: Titillium_bold;
+}
+.settings-form {
+	margin-top: 10px;
+}
+.settings-view label, .receipt-reminder-view label.rr-label {
+	display: inline-block;
+	font-size: 16px;
+	color: #246a7c;
+	float: left;
+	font-family: Titillium_regular;
+	margin-top: 10px;
+	width: 38%;
+}
+.settings-form input {
+	border: none;
+	height: 32px;
+	font-size: 14px;
+	font-family: Titillium_regular;
+	text-align: center;
+	float: left;
+	width: 55%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	margin: 0 0 15px 0px;
+}
+.settings-form .email_address {
+	width: 100%;
+	margin: 15px 0 15px 0;
+}
+
+.receipt-reminder-view .receipt-quantity,
+.receipt-reminder-view .receipt-start,
+.receipt-reminder-view .receipt-before-day,
+.receipt-reminder-view .receipt-reminder-time {
+	width: 25%;
+	float: left;
+	background-image: none;
+	margin: 0 0 15px 0;
+}
+body .receipt-reminder-view .receipt-quantity {
+	width: 12%;
+}
+body .receipt-reminder-view .receipt-start {
+	width: 29%;
+}
+body .receipt-reminder-view .receipt-before-day {
+	width: 12%;
+	margin-right: 5px;
+}
+body .receipt-reminder-view label.rr-label {
+	width: 55%;
+	font-size: 12px;
+}
+.inspection-reminder-view form p, .inspection-reminder-view form span:not(.l10n-IGENX_RES_0042) {
+	font-size: 16px;
+	color: #246a7c;
+	font-family: Titillium_regular;
+	text-align: center;
+}
+body .inspection-reminder-view form span:not(.l10n-IGENX_RES_0042) {
+	float: left;
+	text-align: left;
+	display: inline-block;
+	margin-top: 10px;
+}
+.inspection-reminder-view form .inspection-date,
+.inspection-reminder-view form .inspection-time {
+	width: 90%;
+	margin-bottom: 10px;
+}
+body .graph-buttons {
+	margin-bottom: 15px;
+}
+body .graph-buttons .button {
+	float: left;
+	width: 48%;
+	background-color: #292a2e;
+	color: #FFFFFF;
+	height: 30px;
+	
+}
+.graphs-view .graph-buttons .show-cholester-button {
+	margin-right: 10px;
+	background-image: url('../img/koleszterin_rogzitve.png');
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	font-family: Titillium_regular;
+}
+
+.graphs-view .graph-buttons .show-cholester-button .button-label,
+.graphs-view .graph-buttons .show-weight-button .button-label {
+	padding-left: 40px;
+	font-family: Titillium_regular;
+}
+
+.graphs-view .graph-buttons .show-weight-button {
+	background-image: url('../img/suly_rogzitve.png');
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+.intervall-buttons {
+	width: 80%;
+	margin: 0 auto;
+}
+body .intervall-buttons .button {
+	float: left;
+	width: 33%;
+	background-color: #006b7f;
+	height: 30px;
+}
+body .graphs-view .intervall-buttons .show-monthly-button {
+	-webkit-border-radius: 5px;
+-webkit-border-top-right-radius: 0px;
+-webkit-border-bottom-right-radius: 0px;
+-moz-border-radius: 5px;
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright: 0px;
+border-radius: 5px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+}
+body .graphs-view .intervall-buttons .show-six-months-button {
+	border-radius: 0px;
+	border-left: 1px solid #017f93;
+	border-right: 1px solid #017f93;
+}
+body .graphs-view .intervall-buttons {
+	margin-top: 20px;
+}
+body .graphs-view .intervall-buttons .show-yearly-button {
+	-webkit-border-radius: 0px;
+-webkit-border-top-right-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+-moz-border-radius: 0px;
+-moz-border-radius-topright: 5px;
+-moz-border-radius-bottomright: 5px;
+border-radius: 0px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+body .graphs-view .intervall-buttons .button-label {
+	font-family: Titillium_regular;
+}
+
+/* export */
+.export-form input {
+	border: none;
+	height: 32px;
+	font-size: 14px;
+	font-family: Titillium_regular;
+	text-align: center;
+	float: left;
+	width: 55%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	margin: 0 0 15px 0px;
+}
+.export-form span:not(.l10n-IGENX_RES_0094) {
+	display: inline-block;
+	font-size: 16px;
+	color: #246a7c;
+	float: left;
+	font-family: Titillium_regular;
+	margin-top: 10px;
+	width: 38%;
+}
+.export-form label {
+	font-size: 16px;
+	color: #246a7c;
+	font-family: Titillium_regular;
+}
+body .export-view [type="checkbox"]:not(:checked) + label,
+body .export-view [type="checkbox"]:checked + label {
+	width: 46%;
+}
+body .export-view .button {
+	padding: 7px 0;
+	font-size: 13px; 
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	width: 70%;
+	margin: 0 auto;
+	background-color: #ffb62f;
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+body .export-view .button .button-label {
+	text-align: center;
+	color: #FFFFFF;
+}
+
+
+

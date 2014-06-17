@@ -1,0 +1,56 @@
+<div data-view="Moobile.ScrollView" class="pill-reminder-view">
+	<div data-role="content-wrapper">
+		<div data-role="content">
+			<div class="top-line"></div>
+			<h1 class="page-header l10n-IGENX_RES_0047">Gyógyszer emlékeztető</h1>
+			<div class="container">
+				<form class="pill-reminder-form">
+					
+					<p><input type="checkbox" id="test1" name="active" value="1" class="pill-reminder-active" /><label for="test1" class="l10n-IGENX_RES_0072"></label></p>
+				
+					
+	
+					<div class="multiple-datasets">
+						<input class="typeahead pillname" type="text" name="pillname" placeholder="">
+					</div>
+			
+					<div class="styled-select pill-number-select">
+					   <select name="pill-number" class="pill-number">
+							
+							<option value="1">1</option>
+						</select>
+					</div>
+					<div class="styled-select pill-type-select">
+						<select name="pill-type" class="pill-type">
+							<option value="tabletta">Tabletta</option>
+						</select>
+					</div>
+					<div class="clear"></div>
+					
+					<span class="l10n-IGENX_RES_0074 pill-type-span pill-type-span-1"></span>
+					<div class="styled-select pill-repeat-select">
+						<select name="pill-repeat" class="pill-repeat">
+							<option value="">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+							<option value="">5</option>
+						</select>
+					</div>
+					<span class="l10n-IGENX_RES_0075 pill-type-span"></span>
+					
+					<div class="clear"></div>
+					
+					<span class="l10n-IGENX_RES_0076 pill-reminder-time-span">Emlékeztetés időpontja</span>
+					<input type="text" name="pill-reminder-time" class="pill-reminder-time" readonly />
+					
+					<div data-role="button" data-name="save-pill-reminder" class="save-pill-reminder"><span class="l10n-IGENX_RES_0042"></span></div>	
+				</form>
+				
+			</div>
+			<div class="container">
+				<ul data-role="list" data-name="reminders"></ul>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<div data-view="Moobile.ScrollView" class="receipt-reminder-view">
+	<div data-role="content-wrapper">
+		<div data-role="content">
+		<div class="top-line"></div>
+			<h1 class="page-header l10n-IGENX_RES_0048">Recept emlékeztető</h1>
+			<div class="container">
+				<form class="receipt-reminder-form">
+					<p style="margin: 0 0 15px 0;"><input type="checkbox" id="active2" name="active" value="1" class="receipt-reminder-active" /><label style="color: #246a7c;" for="active2" class="l10n-IGENX_RES_0072"></label></p>
+					<div class="clear"></div>
+					
+					<label class="l10n-IGENX_RES_0077 rr-label"></label>
+					<input type="number" maxlength="1" name="receipt-quantity" pattern="[0-9]*" class="receipt-quantity" />
+					<div class="clear"></div>
+					
+					<label class="l10n-IGENX_RES_0078 rr-label"></label>
+					<input type="text" name="receipt-start" class="receipt-start"  readonly /><br />
+					<div class="clear"></div>
+					
+					<label class="l10n-IGENX_RES_0079 rr-label"></label>
+					<input type="number" name="receipt-before-day" pattern="[0-9]*" class="receipt-before-day" /> <label class="l10n-IGENX_RES_0080 rr-label" style="width: 12%;"></label>
+					<div class="clear"></div>
+					
+					<label class="l10n-IGENX_RES_0081 rr-label"></label>
+					<input type="text" name="receipt-reminder-time" class="receipt-reminder-time"  readonly  />
+					<div class="clear"></div>
+					
+					<div data-role="button" data-name="save-receipt-reminder" class="save-receipt-reminder"><span class="l10n-IGENX_RES_0042" style="color: #ffffff;"></span></div>
+				</form>
+				
+				<ul data-role="list" data-name="reminders"></ul>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>

@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var viewstack;
+var windowcontroller;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -34,6 +37,19 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        
+        viewstack = new Moobile.ViewControllerStack;
+		windowcontroller = new Moobile.WindowController();
+		
+        if (device.platform == "Android")
+		{
+			windowcontroller.setRootViewController(viewstack).getRootViewController().pushViewController(new ViewController.Menu, new Moobile.ViewTransition.None);
+			document.addEventListener("backbutton", function(e) {
+				viewstack.popViewController();
+			}, true);
+        }
+        viewstack = new Moobile.ViewControllerStack;
+		windowcontroller.setRootViewController(viewstack).getRootViewController().pushViewController(new ViewController.Menu, new Moobile.ViewTransition.None);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

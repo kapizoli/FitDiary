@@ -1,0 +1,29 @@
+<div data-view="Moobile.ScrollView" class="inspection-reminder-view">
+	<div data-role="content-wrapper">
+		<div data-role="content">
+		<div class="top-line"></div>
+			<h1 class="page-header l10n-IGENX_RES_0049">Vizsgálat emlékeztető</h1>
+			<div class="container">
+				<form class="inspection-reminder-form">
+					<p style="margin: 0 0 15px 0; text-align: left;">
+					<input type="checkbox" id="active3" name="active" value="1" class="inspection-reminder-active" /><label style="color: #246a7c;" for="active3" class="l10n-IGENX_RES_0072"></label></p>
+					<div class="clear"></div>
+						
+					<p class="l10n-IGENX_RES_0082"></p>
+					<input type="text" name="inspection-date" class="inspection-date" readonly />
+					<div class="clear"></div>
+					<input type="text" name="inspection-time" class="inspection-time" readonly />
+					<div class="clear"></div>
+					
+					<span class="l10n-IGENX_RES_0083"></span>
+					<input type="number" name="inspection-before-day" class="inspection-before-day" maxlength="2" pattern="[0-9]*" /> <span class="l10n-IGENX_RES_0084"></span>
+					<div class="clear"></div>
+					<div data-role="button" data-name="save-inspection-reminder" class="save-inspection-reminder"><span class="l10n-IGENX_RES_0042"></span></div>
+				</form>
+				
+				<ul data-role="list" data-name="reminders"></ul>
+			</div>
+			
+		</div>
+	</div>
+</div>
