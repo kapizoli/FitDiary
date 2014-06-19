@@ -336,21 +336,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.network-information/www/network.js",
-        "id": "org.apache.cordova.network-information.network",
-        "clobbers": [
-            "navigator.connection",
-            "navigator.network.connection"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.network-information/www/Connection.js",
-        "id": "org.apache.cordova.network-information.Connection",
-        "clobbers": [
-            "Connection"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.splashscreen/www/splashscreen.js",
         "id": "org.apache.cordova.splashscreen.SplashScreen",
         "clobbers": [
@@ -391,6 +376,21 @@ module.exports = [
         "clobbers": [
             "window.plugins.socialsharing"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.network-information/www/network.js",
+        "id": "org.apache.cordova.network-information.network",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.network-information/www/Connection.js",
+        "id": "org.apache.cordova.network-information.Connection",
+        "clobbers": [
+            "Connection"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -407,14 +407,14 @@ module.exports.metadata =
     "org.apache.cordova.globalization": "0.2.8",
     "org.apache.cordova.inappbrowser": "0.5.0",
     "org.apache.cordova.media-capture": "0.3.1",
-    "org.apache.cordova.network-information": "0.2.9",
     "org.apache.cordova.splashscreen": "0.3.1",
     "com.cmackay.plugins.googleanalytics": "0.1.1",
     "com.phonegap.plugins.PushPlugin": "2.2.0",
     "com.phonegap.plugins.sqlite": "1.0.0",
     "org.smile.websqldatabase.wpdb": "0.0.1",
     "de.appplant.cordova.plugin.local-notification": "0.7.4",
-    "nl.x-services.plugins.socialsharing": "4.3.0"
+    "nl.x-services.plugins.socialsharing": "4.3.0",
+    "org.apache.cordova.network-information": "0.2.9"
 }
 // BOTTOM OF METADATA
 });

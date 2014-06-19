@@ -45,10 +45,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>",
                             "count": 1
                         },
@@ -70,6 +66,10 @@
                         },
                         {
                             "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -213,9 +213,6 @@
         "org.apache.cordova.media-capture": {
             "PACKAGE_NAME": "hu.fit.diary"
         },
-        "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "hu.fit.diary"
-        },
         "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "hu.fit.diary"
         },
@@ -235,6 +232,9 @@
             "PACKAGE_NAME": "hu.fit.diary"
         },
         "nl.x-services.plugins.socialsharing": {
+            "PACKAGE_NAME": "hu.fit.diary"
+        },
+        "org.apache.cordova.network-information": {
             "PACKAGE_NAME": "hu.fit.diary"
         }
     },
