@@ -25,12 +25,12 @@ ViewController.MainViewController = new Class({
 	activityIndicator: null,
 	screenName: null,
 	loadView: function() {
-
+/*
 		var restSettings = {"url": "http://dev.h2online.hu/igenx_server/api"};
 		this.restClient = new RestClient(restSettings);
 		logDisplay("REST: "+this.restClient);
 		this.sync = new DBSync(this.restClient, db);
-		this.sync.initFileSystem();
+		this.sync.initFileSystem();*/
 		this.activityIndicator = new Moobile.ActivityIndicator();
 		this.view.addChildComponent(this.activityIndicator);
 		this.activityIndicator.hide();
@@ -43,7 +43,7 @@ ViewController.MainViewController = new Class({
 
 	},
 	viewDidBecomeReady: function() {
-		Localization.apply_to_current_html();
+		//Localization.apply_to_current_html();
 		logDisplay("clear main switch event from MainViewController");
 		this.parent();
 	},
@@ -60,7 +60,7 @@ ViewController.MainViewController = new Class({
 		this.parent();
 	},
 	logScreen: function(screenName) {
-		analytics.sendAppView(device.platform+"/"+screenName, function() { logDisplay("Analytics DONE"); }, function() { logDisplay("Analytics ERROR"); });
+		//analytics.sendAppView(device.platform+"/"+screenName, function() { logDisplay("Analytics DONE"); }, function() { logDisplay("Analytics ERROR"); });
 	},
 	destroy: function() {
 

@@ -1,12 +1,8 @@
 ViewController.Menu = new Class({
     Extends: ViewController.MainViewController,
-    calendar: null,
-    reminder: null,
-    graphs: null,
-    getpharmacy: null,
-    cholester_table: null,
 	loadView: function() {
 		this.view = Moobile.View.at('templates/menu.html');
+		console.log(this.view.getChildComponents());
 		this.screenName = "fokepernyo";
 		this.parent();
 	},

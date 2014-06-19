@@ -16,9 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
+var logIt = 1;
 var viewstack;
 var windowcontroller;
+function logDisplay(str) {
+	if (logIt == 1) {
+		console.log(str);
+	}
+}
 var app = {
     // Application Constructor
     initialize: function() {
@@ -36,7 +41,6 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
         
         viewstack = new Moobile.ViewControllerStack;
 		windowcontroller = new Moobile.WindowController();
